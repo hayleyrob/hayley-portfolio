@@ -1,322 +1,819 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>H.E.R.|Design Engineer</title>
-<link rel="icon" type="image/x-icon" href="public/assets/portfolio-favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Darker+Grotesque:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<nav>
-  <a class="nav-logo" onclick="showHome()">
-    <svg width="40" height="40" viewBox="0 0 52 52">
-      <rect width="52" height="52" rx="12" fill="#1a1a18"/>
-      <circle cx="21" cy="26" r="10" stroke="#f6f3ee" stroke-width="1.8" fill="none"/>
-      <circle cx="31" cy="26" r="10" stroke="#f6f3ee" stroke-width="1.8" fill="none"/>
-    </svg>
-    <div class="nav-wordmark-group">
-      <span class="nav-wordmark">H.E.R.</span>
-    </div>
-  </a>
-  <div class="nav-right">
-    <ul class="nav-links">
-      <li><a onclick="showHome()">Home</a></li>
-      <li><a onclick="showProjectsPage()">Projects</a></li>
-      <li><a onclick="showAboutPage()">About</a></li>
-      <li><a onclick="showContactPage()">Contact</a></li>
-    </ul>
-    <a class="nav-cta" onclick="showContactPage()">Chat with me ↗</a>
-    <button class="nav-menu-btn" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a18" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-    </button>
-  </div>
-</nav>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a onclick="showHome();document.getElementById('mobileMenu').classList.remove('open')">Home</a>
-  <a onclick="showProjectsPage();document.getElementById('mobileMenu').classList.remove('open')">Projects</a>
-  <a onclick="showAboutPage();document.getElementById('mobileMenu').classList.remove('open')">About</a>
-  <a onclick="showContactPage();document.getElementById('mobileMenu').classList.remove('open')">Contact</a>
-</div>
-
-<!-- HOME -->
-<div class="page active" id="homePage">
-  <section class="hero">
-    <!-- Shape 1: Seed of Life / sacred geometry - top left -->
-    <div class="hero-shape shape-1"><svg width="180" height="180" viewBox="0 0 180 180" fill="none" stroke="#c8a87c" stroke-width="1.2" opacity="0.6">
-      <circle cx="90" cy="90" r="30"/><circle cx="90" cy="60" r="30"/><circle cx="90" cy="120" r="30"/>
-      <circle cx="64" cy="75" r="30"/><circle cx="116" cy="75" r="30"/><circle cx="64" cy="105" r="30"/><circle cx="116" cy="105" r="30"/>
-    </svg></div>
-    <!-- Shape 2: Crescent moon - top right -->
-    <div class="hero-shape shape-2"><svg width="140" height="140" viewBox="0 0 140 140" fill="none" opacity="0.5">
-      <circle cx="70" cy="70" r="45" stroke="#d4a0a0" stroke-width="1.2"/>
-      <circle cx="85" cy="70" r="45" fill="#f6f3ee" stroke="none"/>
-      <circle cx="70" cy="70" r="45" stroke="#d4a0a0" stroke-width="1.2" fill="none"/>
-    </svg></div>
-    <!-- Shape 3: Eye of providence / third eye - bottom left -->
-    <div class="hero-shape shape-3"><svg width="120" height="80" viewBox="0 0 120 80" fill="none" opacity="0.5">
-      <path d="M10 40C10 40 35 10 60 10C85 10 110 40 110 40C110 40 85 70 60 70C35 70 10 40 10 40Z" stroke="#8ba4b8" stroke-width="1.2"/>
-      <circle cx="60" cy="40" r="14" stroke="#8ba4b8" stroke-width="1.2"/>
-      <circle cx="60" cy="40" r="5" fill="#8ba4b8"/>
-    </svg></div>
-    <!-- Shape 4: Vesica piscis (echoing logo) - right side -->
-    <div class="hero-shape shape-4"><svg width="100" height="100" viewBox="0 0 100 100" fill="none" opacity="0.35">
-      <circle cx="38" cy="50" r="28" stroke="#c8a87c" stroke-width="1.2"/>
-      <circle cx="62" cy="50" r="28" stroke="#c8a87c" stroke-width="1.2"/>
-    </svg></div>
-    <!-- Shape 5: Spiral - upper area -->
-    <div class="hero-shape shape-5"><svg width="90" height="90" viewBox="0 0 90 90" fill="none" stroke="#d4a0a0" stroke-width="1.2" opacity="0.45" stroke-linecap="round">
-      <path d="M45 45C45 42 48 39 51 39C56 39 59 43 59 48C59 55 53 60 46 60C37 60 31 53 31 44C31 33 39 26 50 26"/>
-    </svg></div>
-    <!-- Shape 6: 8-pointed star - lower right -->
-    <div class="hero-shape shape-6"><svg width="70" height="70" viewBox="0 0 70 70" fill="none" stroke="#8ba4b8" stroke-width="1" opacity="0.4">
-      <line x1="35" y1="5" x2="35" y2="65"/><line x1="5" y1="35" x2="65" y2="35"/>
-      <line x1="13" y1="13" x2="57" y2="57"/><line x1="57" y1="13" x2="13" y2="57"/>
-      <circle cx="35" cy="35" r="12"/>
-    </svg></div>
-    <p class="hero-greeting">Hi I'm Hayley ✦</p>
-    <h1>Product and<br><em>Design Engineer</em></h1>
-    <p class="hero-desc">I design intelligent systems that transform complex processes into intuitive digital experiences by bridging product strategy, engineering, and interface foresight. Focus on the intersection of code, culture, and creativity.</p>
-    <a class="hero-cta" onclick="showContactPage()">Chat with me</a>
-  </section>
-
-  <section class="carousel-section">
-    <div class="carousel-label">
-      <svg width="36" height="36" viewBox="0 0 40 40" fill="none"><circle cx="15" cy="20" r="10" stroke="#1a1a18" stroke-width="1.5" fill="none"/><circle cx="25" cy="20" r="10" stroke="#1a1a18" stroke-width="1.5" fill="none"/></svg><br>
-      <span>A tiny fraction of my work</span>
-    </div>
-    <div class="carousel-track" id="carouselTrack"></div>
-  </section>
-
-  <section class="projects-section" id="work">
-    <div class="projects-header">
-      <div class="projects-header-left">
-        <span class="projects-year">//@2025-2026</span>
-        <h2>Projects</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>H.E.R.|Design Engineer</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="public/assets/portfolio-favicon.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Darker+Grotesque:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&family=Caveat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a class="nav-logo" onclick="showHome()">
+        <svg width="40" height="40" viewBox="0 0 52 52">
+          <rect width="52" height="52" rx="12" fill="#1a1a18" />
+          <circle
+            cx="21"
+            cy="26"
+            r="10"
+            stroke="#f6f3ee"
+            stroke-width="1.8"
+            fill="none"
+          />
+          <circle
+            cx="31"
+            cy="26"
+            r="10"
+            stroke="#f6f3ee"
+            stroke-width="1.8"
+            fill="none"
+          />
+        </svg>
+        <div class="nav-wordmark-group">
+          <span class="nav-wordmark">H.E.R.</span>
+        </div>
+      </a>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a onclick="showHome()">Home</a></li>
+          <li><a onclick="showProjectsPage()">Projects</a></li>
+          <li><a onclick="showAboutPage()">About</a></li>
+          <li><a onclick="showContactPage()">Contact</a></li>
+        </ul>
+        <a class="nav-cta" onclick="showContactPage()">Chat with me ↗</a>
+        <button
+          class="nav-menu-btn"
+          onclick="
+            document.getElementById('mobileMenu').classList.toggle('open')
+          "
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#1a1a18"
+            stroke-width="2"
+          >
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
       </div>
-      <p class="projects-header-desc">A curated selection of projects that transform complex ideas and processes into intuitive, elegant digital systems.</p>
-      <a onclick="showProjectsPage()" class="projects-header-cta">View all projects <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12L12 4M12 4H6M12 4v6"/></svg></a>
-    </div>
-    <div class="home-projects-grid" id="homeProjectsGrid"></div>
-  </section>
+    </nav>
 
-  <section class="resume-section" id="about">
-    <div class="resume-top">
-      <div class="resume-photo-col">
-        <img src="public/assets/hayley-headshot.jpg" alt="Hayley Robinson" class="resume-photo"/>
-        <div><span class="resume-photo-tag">that's me ✦</span></div>
-      </div>
-      <div class="resume-intro">
-        <h2>Building at the intersection of anthropology, technology, and systems design.</h2>
-        <p>I approach digital products through an anthropological lens — studying behavior, identifying friction, and translating complex human processes into intuitive digital systems.</p>
-        <p>With a background spanning anthropology, tech sales, engineering, and design, I bridge strategy and execution. I'm particularly drawn to emerging technologies and AI-driven environments, where workflows are still being defined and interfaces are still evolving.</p>
-        <p>My work focuses on clarifying complexity, from optimizing processes, to shaping interaction patterns, and designing systems that feel natural, efficient, and forward-looking.</p>
-        <div class="resume-quick-facts">
-          <div class="resume-fact"><span class="resume-fact-label">Focus</span><span class="resume-fact-value">Designing intelligent workflows & AI-enabled systems</span></div>
-          <div class="resume-fact"><span class="resume-fact-label">Based in</span><span class="resume-fact-value">SF Bay Area</span></div>
-        </div>
-        <div class="resume-quick-facts">
-          <div class="resume-fact"><span class="resume-fact-label">Mission</span><span class="resume-fact-value">To shape emerging technologies into usable, human-centered systems that elevate how we work and interact.</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="resume-tabs" id="resumeTabs">
-      <button class="resume-tab active" onclick="switchTab('education')">Education</button>
-      <button class="resume-tab" onclick="switchTab('experience')">Experience</button>
-      <button class="resume-tab" onclick="switchTab('interests')">Interests</button>
-    </div>
-
-    <div class="resume-panel active" id="panel-education">
-      <div class="resume-cards">
-        <div class="resume-card">
-          <div class="resume-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.42A12.08 12.08 0 0121 17.58C18.38 19.49 15.34 21 12 21s-6.38-1.51-9-3.42a12.08 12.08 0 012.84-6.99L12 14z"/></svg></div>
-          <div class="resume-card-year">2009-2014</div>
-          <div class="resume-card-title">B.A. in Anthropology</div>
-          <div class="resume-card-org">UCLA</div>
-          <div class="resume-card-desc">Built the interdisciplinary foundation in culture, human behavior, and systems thinking that informs everything I do.</div>
-        </div>
-        <div class="resume-card">
-          <div class="resume-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9l3 3-3 3m5 0h3M4 19h16a2 2 0 002-2V7a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
-          <div class="resume-card-year">2020</div>
-          <div class="resume-card-title">Engineering Bootcamp</div>
-          <div class="resume-card-org">UC Irvine</div>
-          <div class="resume-card-desc">Intensive full-stack program covering React, Node, Express, MongoDB, and MySQL.</div>
-        </div>
-        <div class="resume-card">
-          <div class="resume-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
-          <div class="resume-card-year">2025-2026</div>
-          <div class="resume-card-title">Prompt Engineering & Claude Code</div>
-          <div class="resume-card-org">Vanderbilt University</div>
-          <div class="resume-card-desc">AI-assisted software engineering and advanced prompt design for building production applications.</div>
-        </div>
-        <div class="resume-card">
-          <div class="resume-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
-          <div class="resume-card-year">2025</div>
-          <div class="resume-card-title">Graphic & UI Design</div>
-          <div class="resume-card-org">CalArts</div>
-          <div class="resume-card-desc">Visual design fundamentals, interface design systems, and creative direction for digital products.</div>
-        </div>
-        <div class="resume-card">
-          <div class="resume-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
-          <div class="resume-card-year">2025 – 2026</div>
-          <div class="resume-card-title">User Experience Design</div>
-          <div class="resume-card-org">Google</div>
-          <div class="resume-card-desc">Research-driven UX methodology, usability testing, and human-centered design principles.</div>
-        </div>
-        <div class="resume-card">
-          <div class="resume-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg></div>
-          <div class="resume-card-year">2026</div>
-          <div class="resume-card-title">Creative Writing & Storytelling</div>
-          <div class="resume-card-org">Wesleyan University</div>
-          <div class="resume-card-desc">Narrative craft, brand storytelling, and the art of communicating ideas that resonate.</div>
-        </div>
-        <div class="resume-card">
-          <div class="resume-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg></div>
-          <div class="resume-card-year">2025</div>
-          <div class="resume-card-title">Machine Learning</div>
-          <div class="resume-card-org">DeepLearning.AI</div>
-          <div class="resume-card-desc">Foundations of ML, neural networks, and understanding the technology powering the AI tools I build with.</div>
-        </div>
-      </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a
+        onclick="
+          showHome();
+          document.getElementById('mobileMenu').classList.remove('open');
+        "
+        >Home</a
+      >
+      <a
+        onclick="
+          showProjectsPage();
+          document.getElementById('mobileMenu').classList.remove('open');
+        "
+        >Projects</a
+      >
+      <a
+        onclick="
+          showAboutPage();
+          document.getElementById('mobileMenu').classList.remove('open');
+        "
+        >About</a
+      >
+      <a
+        onclick="
+          showContactPage();
+          document.getElementById('mobileMenu').classList.remove('open');
+        "
+        >Contact</a
+      >
     </div>
 
-    <div class="resume-panel" id="panel-experience">
-      <div class="resume-cards">
-        <div class="resume-card">
-          <div class="resume-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
-          <div class="resume-card-year">2026 – Present</div>
-          <div class="resume-card-title">Head Imagineer</div>
-          <div class="resume-card-org">Kindred Studio</div>
-          <div class="resume-card-desc">Creative imagineering studio rooted in anthropological study, Jungian psychology, and emerging technologies.</div>
+    <!-- HOME -->
+    <div class="page active" id="homePage">
+      <section class="hero">
+        <!-- Shape 1: Seed of Life / sacred geometry - top left -->
+        <div class="hero-shape shape-1">
+          <svg
+            width="180"
+            height="180"
+            viewBox="0 0 180 180"
+            fill="none"
+            stroke="#c8a87c"
+            stroke-width="1.2"
+            opacity="0.6"
+          >
+            <circle cx="90" cy="90" r="30" />
+            <circle cx="90" cy="60" r="30" />
+            <circle cx="90" cy="120" r="30" />
+            <circle cx="64" cy="75" r="30" />
+            <circle cx="116" cy="75" r="30" />
+            <circle cx="64" cy="105" r="30" />
+            <circle cx="116" cy="105" r="30" />
+          </svg>
         </div>
-        <div class="resume-card">
-          <div class="resume-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
-          <div class="resume-card-year">2024 – 2026</div>
-          <div class="resume-card-title">Digital Designer</div>
-          <div class="resume-card-org">Harmonia Code</div>
-          <div class="resume-card-desc">Digital design and creative direction for a development studio.</div>
+        <!-- Shape 2: Crescent moon - top right -->
+        <div class="hero-shape shape-2">
+          <svg
+            width="140"
+            height="140"
+            viewBox="0 0 140 140"
+            fill="none"
+            opacity="0.5"
+          >
+            <circle
+              cx="70"
+              cy="70"
+              r="45"
+              stroke="#d4a0a0"
+              stroke-width="1.2"
+            />
+            <circle cx="85" cy="70" r="45" fill="#f6f3ee" stroke="none" />
+            <circle
+              cx="70"
+              cy="70"
+              r="45"
+              stroke="#d4a0a0"
+              stroke-width="1.2"
+              fill="none"
+            />
+          </svg>
         </div>
-        <div class="resume-card">
-          <div class="resume-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
-          <div class="resume-card-year">2023</div>
-          <div class="resume-card-title">Enterprise Account Executive</div>
-          <div class="resume-card-org">Sift</div>
-          <div class="resume-card-desc">Enterprise sales for AI-powered digital trust and safety platform, navigating complex deal cycles in the AI security space.</div>
+        <!-- Shape 3: Eye of providence / third eye - bottom left -->
+        <div class="hero-shape shape-3">
+          <svg
+            width="120"
+            height="80"
+            viewBox="0 0 120 80"
+            fill="none"
+            opacity="0.5"
+          >
+            <path
+              d="M10 40C10 40 35 10 60 10C85 10 110 40 110 40C110 40 85 70 60 70C35 70 10 40 10 40Z"
+              stroke="#8ba4b8"
+              stroke-width="1.2"
+            />
+            <circle
+              cx="60"
+              cy="40"
+              r="14"
+              stroke="#8ba4b8"
+              stroke-width="1.2"
+            />
+            <circle cx="60" cy="40" r="5" fill="#8ba4b8" />
+          </svg>
         </div>
-        <div class="resume-card">
-          <div class="resume-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg></div>
-          <div class="resume-card-year">2022</div>
-          <div class="resume-card-title">Enterprise Account Executive</div>
-          <div class="resume-card-org">Abacus.ai</div>
-          <div class="resume-card-desc">Enterprise sales for an AI/ML platform — firsthand insight into how organizations evaluate and adopt AI infrastructure.</div>
+        <!-- Shape 4: Vesica piscis (echoing logo) - right side -->
+        <div class="hero-shape shape-4">
+          <svg
+            width="100"
+            height="100"
+            viewBox="0 0 100 100"
+            fill="none"
+            opacity="0.35"
+          >
+            <circle
+              cx="38"
+              cy="50"
+              r="28"
+              stroke="#c8a87c"
+              stroke-width="1.2"
+            />
+            <circle
+              cx="62"
+              cy="50"
+              r="28"
+              stroke="#c8a87c"
+              stroke-width="1.2"
+            />
+          </svg>
         </div>
-        <div class="resume-card">
-          <div class="resume-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg></div>
-          <div class="resume-card-year">2021</div>
-          <div class="resume-card-title">VP of Sales & Engineering</div>
-          <div class="resume-card-org">QCM Agency</div>
-          <div class="resume-card-desc">Led sales strategy and customer success operations, driving revenue growth and client retention for a creative agency.</div>
+        <!-- Shape 5: Spiral - upper area -->
+        <div class="hero-shape shape-5">
+          <svg
+            width="90"
+            height="90"
+            viewBox="0 0 90 90"
+            fill="none"
+            stroke="#d4a0a0"
+            stroke-width="1.2"
+            opacity="0.45"
+            stroke-linecap="round"
+          >
+            <path
+              d="M45 45C45 42 48 39 51 39C56 39 59 43 59 48C59 55 53 60 46 60C37 60 31 53 31 44C31 33 39 26 50 26"
+            />
+          </svg>
         </div>
-        <div class="resume-card">
-          <div class="resume-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div>
-          <div class="resume-card-year">2020</div>
-          <div class="resume-card-title">Solutions Architect</div>
-          <div class="resume-card-org">HR Solutions</div>
-          <div class="resume-card-desc">Bridged the gap between technical products and human needs — architecting solutions for enterprise HR technology.</div>
+        <!-- Shape 6: 8-pointed star - lower right -->
+        <div class="hero-shape shape-6">
+          <svg
+            width="70"
+            height="70"
+            viewBox="0 0 70 70"
+            fill="none"
+            stroke="#8ba4b8"
+            stroke-width="1"
+            opacity="0.4"
+          >
+            <line x1="35" y1="5" x2="35" y2="65" />
+            <line x1="5" y1="35" x2="65" y2="35" />
+            <line x1="13" y1="13" x2="57" y2="57" />
+            <line x1="57" y1="13" x2="13" y2="57" />
+            <circle cx="35" cy="35" r="12" />
+          </svg>
         </div>
-        <div class="resume-card">
-          <div class="resume-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></div>
-          <div class="resume-card-year">2018 – 2019</div>
-          <div class="resume-card-title">Enterprise Inside Account Executive</div>
-          <div class="resume-card-org">Box</div>
-          <div class="resume-card-desc">Managed enterprise accounts and closed deals at one of cloud storage's defining companies.</div>
+        <p class="hero-greeting">Hi I'm Hayley ✦</p>
+        <h1>Converging capabilities, <br /><em>code and creativity</em></h1>
+        <p class="hero-desc">
+          I design intelligent systems that transform complex processes into
+          intuitive digital experiences by bridging product strategy,
+          engineering, and interface foresight. Focused on the intersection of
+          code, culture, and creativity.
+        </p>
+        <a class="hero-cta" onclick="showProjectsPage()">View work</a>
+      </section>
+
+      <section class="carousel-section">
+        <div class="carousel-label">
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
+            <circle
+              cx="15"
+              cy="20"
+              r="10"
+              stroke="#1a1a18"
+              stroke-width="1.5"
+              fill="none"
+            />
+            <circle
+              cx="25"
+              cy="20"
+              r="10"
+              stroke="#1a1a18"
+              stroke-width="1.5"
+              fill="none"
+            /></svg
+          ><br />
+          <span>A tiny fraction of my work</span>
         </div>
-        <div class="resume-card">
-          <div class="resume-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg></div>
-          <div class="resume-card-year">2017 – 2018</div>
-          <div class="resume-card-title">Team Lead, Outbound Business</div>
-          <div class="resume-card-org">Box</div>
-          <div class="resume-card-desc">Promoted to team lead, coaching reps and scaling outbound pipeline for enterprise cloud storage.</div>
+        <div class="carousel-track" id="carouselTrack"></div>
+      </section>
+
+      <section class="projects-section" id="work">
+        <div class="projects-header">
+          <div class="projects-header-left">
+            <span class="projects-year">//@2025-2026</span>
+            <h2>Projects</h2>
+          </div>
+          <p class="projects-header-desc">
+            A curated selection of projects that transform complex ideas and
+            processes into intuitive, elegant digital systems.
+          </p>
+          <a onclick="showProjectsPage()" class="projects-header-cta"
+            >View all projects
+            <svg
+              viewBox="0 0 16 16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path d="M4 12L12 4M12 4H6M12 4v6" /></svg
+          ></a>
         </div>
-        <div class="resume-card">
-          <div class="resume-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg></div>
-          <div class="resume-card-year">2016 – 2017</div>
-          <div class="resume-card-title">Team Lead, Outbound Business</div>
-          <div class="resume-card-org">WalkMe</div>
-          <div class="resume-card-desc">Led outbound business development team, driving enterprise pipeline and refining go-to-market strategy.</div>
+        <div class="home-projects-grid" id="homeProjectsGrid"></div>
+      </section>
+
+      <section class="resume-section" id="about">
+        <div class="resume-top">
+          <div class="resume-photo-col">
+            <img
+              src="public/assets/hayley-headshot.jpg"
+              alt="Hayley Robinson"
+              class="resume-photo"
+            />
+            <div><span class="resume-photo-tag">that's me ✦</span></div>
+          </div>
+          <div class="resume-intro">
+            <h2>
+              Building at the intersection of anthropology, technology, and
+              systems design.
+            </h2>
+            <p>
+              I approach digital products through an anthropological lens —
+              studying behavior, identifying friction, and translating complex
+              human processes into intuitive digital systems.
+            </p>
+            <p>
+              With a background spanning anthropology, tech sales, engineering,
+              and design, I bridge strategy and execution. I'm particularly
+              drawn to emerging technologies and AI-driven environments, where
+              workflows are still being defined and interfaces are still
+              evolving.
+            </p>
+            <p>
+              My work focuses on clarifying complexity, from optimizing
+              processes, to shaping interaction patterns, and designing systems
+              that feel natural, efficient, and forward-looking.
+            </p>
+            <div class="resume-quick-facts">
+              <div class="resume-fact">
+                <span class="resume-fact-label">Focus</span
+                ><span class="resume-fact-value"
+                  >Designing intelligent workflows & AI-enabled systems</span
+                >
+              </div>
+              <div class="resume-fact">
+                <span class="resume-fact-label">Based in</span
+                ><span class="resume-fact-value">SF Bay Area</span>
+              </div>
+            </div>
+            <div class="resume-quick-facts">
+              <div class="resume-fact">
+                <span class="resume-fact-label">Mission</span
+                ><span class="resume-fact-value"
+                  >To shape emerging technologies into usable, human-centered
+                  systems that elevate how we work and interact.</span
+                >
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="resume-card">
-          <div class="resume-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
-          <div class="resume-card-year">2015 – 2016</div>
-          <div class="resume-card-title">Enterprise SDR</div>
-          <div class="resume-card-org">WalkMe</div>
-          <div class="resume-card-desc">Enterprise sales development for digital adoption platform, building pipeline and understanding how organizations navigate software transformation.</div>
+
+        <div class="resume-tabs" id="resumeTabs">
+          <button class="resume-tab active" onclick="switchTab('education')">
+            Education
+          </button>
+          <button class="resume-tab" onclick="switchTab('experience')">
+            Experience
+          </button>
+          <button class="resume-tab" onclick="switchTab('interests')">
+            Interests
+          </button>
         </div>
-        <div class="resume-card">
-          <div class="resume-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9l3 3-3 3m5 0h3M4 19h16a2 2 0 002-2V7a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
-          <div class="resume-card-year">2014 – 2015</div>
-          <div class="resume-card-title">Digital Strategist</div>
-          <div class="resume-card-org">Coalition Technologies</div>
-          <div class="resume-card-desc">Digital strategy and client solutions at the intersection of design, data, and technology.</div>
+
+        <div class="resume-panel active" id="panel-education">
+          <div class="resume-cards">
+            <div class="resume-card">
+              <div class="resume-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                  <path
+                    d="M12 14l6.16-3.42A12.08 12.08 0 0121 17.58C18.38 19.49 15.34 21 12 21s-6.38-1.51-9-3.42a12.08 12.08 0 012.84-6.99L12 14z"
+                  />
+                </svg>
+              </div>
+              <div class="resume-card-year">2009-2014</div>
+              <div class="resume-card-title">B.A. in Anthropology</div>
+              <div class="resume-card-org">UCLA</div>
+              <div class="resume-card-desc">
+                Built the interdisciplinary foundation in culture, human
+                behavior, and systems thinking that informs everything I do.
+              </div>
+            </div>
+            <div class="resume-card">
+              <div class="resume-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M8 9l3 3-3 3m5 0h3M4 19h16a2 2 0 002-2V7a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <div class="resume-card-year">2020</div>
+              <div class="resume-card-title">Engineering Bootcamp</div>
+              <div class="resume-card-org">UC Irvine</div>
+              <div class="resume-card-desc">
+                Intensive full-stack program covering React, Node, Express,
+                MongoDB, and MySQL.
+              </div>
+            </div>
+            <div class="resume-card">
+              <div class="resume-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <div class="resume-card-year">2025-2026</div>
+              <div class="resume-card-title">
+                Prompt Engineering & Claude Code
+              </div>
+              <div class="resume-card-org">Vanderbilt University</div>
+              <div class="resume-card-desc">
+                AI-assisted software engineering and advanced prompt design for
+                building production applications.
+              </div>
+            </div>
+            <div class="resume-card">
+              <div class="resume-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <div class="resume-card-year">2025</div>
+              <div class="resume-card-title">Graphic & UI Design</div>
+              <div class="resume-card-org">CalArts</div>
+              <div class="resume-card-desc">
+                Visual design fundamentals, interface design systems, and
+                creative direction for digital products.
+              </div>
+            </div>
+            <div class="resume-card">
+              <div class="resume-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </div>
+              <div class="resume-card-year">2025 – 2026</div>
+              <div class="resume-card-title">User Experience Design</div>
+              <div class="resume-card-org">Google</div>
+              <div class="resume-card-desc">
+                Research-driven UX methodology, usability testing, and
+                human-centered design principles.
+              </div>
+            </div>
+            <div class="resume-card">
+              <div class="resume-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                  />
+                </svg>
+              </div>
+              <div class="resume-card-year">2026</div>
+              <div class="resume-card-title">
+                Creative Writing & Storytelling
+              </div>
+              <div class="resume-card-org">Wesleyan University</div>
+              <div class="resume-card-desc">
+                Narrative craft, brand storytelling, and the art of
+                communicating ideas that resonate.
+              </div>
+            </div>
+            <div class="resume-card">
+              <div class="resume-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                  />
+                </svg>
+              </div>
+              <div class="resume-card-year">2025</div>
+              <div class="resume-card-title">Machine Learning</div>
+              <div class="resume-card-org">DeepLearning.AI</div>
+              <div class="resume-card-desc">
+                Foundations of ML, neural networks, and understanding the
+                technology powering the AI tools I build with.
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+
+        <div class="resume-panel" id="panel-experience">
+          <div class="resume-cards">
+            <div class="resume-card">
+              <div class="resume-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div class="resume-card-year">2026 – Present</div>
+              <div class="resume-card-title">Head Imagineer</div>
+              <div class="resume-card-org">Kindred Studio</div>
+              <div class="resume-card-desc">
+                Creative imagineering studio rooted in anthropological study,
+                Jungian psychology, and emerging technologies.
+              </div>
+            </div>
+            <div class="resume-card">
+              <div class="resume-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <div class="resume-card-year">2024 – 2026</div>
+              <div class="resume-card-title">Digital Designer</div>
+              <div class="resume-card-org">Harmonia Code</div>
+              <div class="resume-card-desc">
+                Digital design and creative direction for a development studio.
+              </div>
+            </div>
+            <div class="resume-card">
+              <div class="resume-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <div class="resume-card-year">2023</div>
+              <div class="resume-card-title">Enterprise Account Executive</div>
+              <div class="resume-card-org">Sift</div>
+              <div class="resume-card-desc">
+                Enterprise sales for AI-powered digital trust and safety
+                platform, navigating complex deal cycles in the AI security
+                space.
+              </div>
+            </div>
+            <div class="resume-card">
+              <div class="resume-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                  />
+                </svg>
+              </div>
+              <div class="resume-card-year">2022</div>
+              <div class="resume-card-title">Enterprise Account Executive</div>
+              <div class="resume-card-org">Abacus.ai</div>
+              <div class="resume-card-desc">
+                Enterprise sales for an AI/ML platform — firsthand insight into
+                how organizations evaluate and adopt AI infrastructure.
+              </div>
+            </div>
+            <div class="resume-card">
+              <div class="resume-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              </div>
+              <div class="resume-card-year">2021</div>
+              <div class="resume-card-title">VP of Sales & Engineering</div>
+              <div class="resume-card-org">QCM Agency</div>
+              <div class="resume-card-desc">
+                Led sales strategy and customer success operations, driving
+                revenue growth and client retention for a creative agency.
+              </div>
+            </div>
+            <div class="resume-card">
+              <div class="resume-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                  />
+                </svg>
+              </div>
+              <div class="resume-card-year">2020</div>
+              <div class="resume-card-title">Solutions Architect</div>
+              <div class="resume-card-org">HR Solutions</div>
+              <div class="resume-card-desc">
+                Bridged the gap between technical products and human needs —
+                architecting solutions for enterprise HR technology.
+              </div>
+            </div>
+            <div class="resume-card">
+              <div class="resume-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                  />
+                </svg>
+              </div>
+              <div class="resume-card-year">2018 – 2019</div>
+              <div class="resume-card-title">
+                Enterprise Inside Account Executive
+              </div>
+              <div class="resume-card-org">Box</div>
+              <div class="resume-card-desc">
+                Managed enterprise accounts and closed deals at one of cloud
+                storage's defining companies.
+              </div>
+            </div>
+            <div class="resume-card">
+              <div class="resume-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              </div>
+              <div class="resume-card-year">2017 – 2018</div>
+              <div class="resume-card-title">Team Lead, Outbound Business</div>
+              <div class="resume-card-org">Box</div>
+              <div class="resume-card-desc">
+                Promoted to team lead, coaching reps and scaling outbound
+                pipeline for enterprise cloud storage.
+              </div>
+            </div>
+            <div class="resume-card">
+              <div class="resume-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              </div>
+              <div class="resume-card-year">2016 – 2017</div>
+              <div class="resume-card-title">Team Lead, Outbound Business</div>
+              <div class="resume-card-org">WalkMe</div>
+              <div class="resume-card-desc">
+                Led outbound business development team, driving enterprise
+                pipeline and refining go-to-market strategy.
+              </div>
+            </div>
+            <div class="resume-card">
+              <div class="resume-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </div>
+              <div class="resume-card-year">2015 – 2016</div>
+              <div class="resume-card-title">Enterprise SDR</div>
+              <div class="resume-card-org">WalkMe</div>
+              <div class="resume-card-desc">
+                Enterprise sales development for digital adoption platform,
+                building pipeline and understanding how organizations navigate
+                software transformation.
+              </div>
+            </div>
+            <div class="resume-card">
+              <div class="resume-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M8 9l3 3-3 3m5 0h3M4 19h16a2 2 0 002-2V7a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <div class="resume-card-year">2014 – 2015</div>
+              <div class="resume-card-title">Digital Strategist</div>
+              <div class="resume-card-org">Coalition Technologies</div>
+              <div class="resume-card-desc">
+                Digital strategy and client solutions at the intersection of
+                design, data, and technology.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-panel" id="panel-interests">
+          <div class="resume-interests">
+            <span class="resume-interest">Imagineering</span>
+            <span class="resume-interest">Mindfulness</span>
+            <span class="resume-interest">Emerging Technologies</span>
+            <span class="resume-interest">Anthropology</span>
+            <span class="resume-interest">Mental Health</span>
+            <span class="resume-interest">Psychology</span>
+            <span class="resume-interest">Philosophy</span>
+            <span class="resume-interest">Art</span>
+            <span class="resume-interest">History</span>
+            <span class="resume-interest">Jungian Archetypes</span>
+            <span class="resume-interest">Nervous System Science</span>
+            <span class="resume-interest">Creative Writing</span>
+            <span class="resume-interest">Brand Storytelling</span>
+            <span class="resume-interest">Photography</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <h2>Let's work together</h2>
+        <p>
+          Open to strategic roles, collaborative projects, and conversations at
+          the intersection of design, culture, and intelligent systems.
+        </p>
+        <div class="contact-links">
+          <a
+            href="https://github.com/hayleyrob"
+            target="_blank"
+            class="contact-link"
+            >GitHub</a
+          >
+          <a
+            href="https://linkedin.com/in/hayleyerobinson"
+            target="_blank"
+            class="contact-link"
+            >LinkedIn</a
+          >
+          <a href="mailto:hayley@harmoniacode.com" class="contact-link"
+            >Email</a
+          >
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <span>&copy; 2026 Hayley Robinson</span>
+        <span>Designed with Kindred Studio</span>
+      </footer>
     </div>
 
-    <div class="resume-panel" id="panel-interests">
-      <div class="resume-interests">
-        <span class="resume-interest">Imagineering</span>
-        <span class="resume-interest">Mindfulness</span>
-        <span class="resume-interest">Emerging Technologies</span>
-        <span class="resume-interest">Anthropology</span>
-        <span class="resume-interest">Mental Health</span>
-        <span class="resume-interest">Psychology</span>
-        <span class="resume-interest">Philosophy</span>
-        <span class="resume-interest">Art</span>
-        <span class="resume-interest">History</span>
-        <span class="resume-interest">Jungian Archetypes</span>
-        <span class="resume-interest">Nervous System Science</span>
-        <span class="resume-interest">Creative Writing</span>
-        <span class="resume-interest">Brand Storytelling</span>
-        <span class="resume-interest">Photography</span>
-      </div>
-    </div>
-  </section>
+    <!-- PROJECTS PAGE -->
+    <div class="page" id="projectsPage"></div>
 
-  <section class="contact-section" id="contact">
-    <h2>Let's work together</h2>
-    <p>Open to strategic roles, collaborative projects, and conversations at the intersection of design, culture, and intelligent systems.</p>
-    <div class="contact-links">
-      <a href="https://github.com/hayleyrob" target="_blank" class="contact-link">GitHub</a>
-      <a href="https://linkedin.com/in/hayleyerobinson" target="_blank" class="contact-link">LinkedIn</a>
-      <a href="mailto:hayley@harmoniacode.com" class="contact-link">Email</a>
-    </div>
-  </section>
+    <!-- ARTICLES PAGE -->
+    <div class="page" id="articlesPage"></div>
 
-  <footer class="site-footer">
-    <span>&copy; 2026 Hayley Robinson</span>
-    <span>Designed with Kindred Studio</span>
-  </footer>
-</div>
+    <!-- CASE STUDY PAGE -->
+    <div class="page" id="caseStudyPage"></div>
 
-<!-- PROJECTS PAGE -->
-<div class="page" id="projectsPage"></div>
+    <!-- ABOUT PAGE -->
+    <div class="page" id="aboutPage"></div>
 
-<!-- ARTICLES PAGE -->
-<div class="page" id="articlesPage"></div>
+    <!-- CONTACT PAGE -->
+    <div class="page" id="contactPage"></div>
 
-<!-- CASE STUDY PAGE -->
-<div class="page" id="caseStudyPage"></div>
-
-<!-- ABOUT PAGE -->
-<div class="page" id="aboutPage"></div>
-
-<!-- CONTACT PAGE -->
-<div class="page" id="contactPage"></div>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
