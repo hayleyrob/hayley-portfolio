@@ -79,8 +79,8 @@ const projects = [
     type: "Complex Business Workflow",
     subtitle:
       "A workflow management tool for marketing asset approval that includes AI Review where AI analyzes the digital asset and compares it to brand guidelines .",
-    image: ASSETS + "assetflow-2s.mp4",
-    mediaType: "video",
+    image: ASSETS + "ai-brandaudit.png",
+    mediaType: "image",
     category: "Business Workflow",
     tech: ["UX Research", "Anthropic API", "Next.js"],
     year: "2025",
